@@ -16,7 +16,7 @@ import { OrbitControls } from 'https://unpkg.com/three@0.127.0/examples/jsm/cont
 const canvas = document.querySelector('canvas.canvas1')
 
 const scene = new THREE.Scene()
-const geometry = new THREE.SphereGeometry(1 ,32,32)
+const geometry = new THREE.SphereGeometry(1 ,52,52)
 const material = new THREE.MeshBasicMaterial({ color:'red', wireframe:true})
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
@@ -47,8 +47,8 @@ controls.update();
 const tick =()=>{
 
 console.log('hello')
-    mesh.rotation.y += 0.01
-    mesh.rotation.x += 0.01
+    // mesh.rotation.y += 0.01
+    // mesh.rotation.x += 0.01
     controls.update();
     renderer.render(scene, camera)
     window.requestAnimationFrame(tick)
